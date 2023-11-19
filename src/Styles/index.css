@@ -35,4 +35,8 @@
   .app {
     @apply text-regular font-global min-h-screen  bg-Light-Grayish-Cyan-(Background) text-Very-Dark-Grayish-Cyan
   }
+
+  .app > header {
+    @apply p-6 bg-Dark-Grayish-Cyan bg-center bg-cover bg-blend-overlay tablet:p-12
+  }
 }
