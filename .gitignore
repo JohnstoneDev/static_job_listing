@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/static-job-listings-master
 
 package-lock.json
 
