@@ -11,7 +11,7 @@ const Job = ({
   return (
     <section className={`p-4 flex flex-col gap-4 items-start tablet:flex-row bg-[#ffff] rounded-l-sm rounded-lg shadow-2xl ${featuredBrd}`}>
        <img src={logo} alt={""} className="bg-[#000000] p-10 mt-[-45px] rounded-full tablet:mt-0" />
-       <div>
+       <div className='space-y-2'>
           <article className='flex gap-3 space-x-2 items-center'>
             <p className='text-Dark-Grayish-Cyan font-semibold'>{company}</p>
             <p hidden={!recent}   className='rounded-md font-semibold p-1 text-Light-Grayish-Cyan bg-Dark-Grayish-Cyan'>{recent ? "New" : "" }</p>

@@ -4,7 +4,7 @@ import { v4 as uuid } from "uuid"
 
 // assets
 import data from '../data.json'
-import removeIcon from '../images/icon-remove.svg'
+// import removeIcon from '../images/icon-remove.svg'
 
 // components
 import { Container } from "./Container"
@@ -13,23 +13,14 @@ import { JobList } from "./JobList"
 // Displays the filters used
 const FilterComponent = ({ filters, clearFilters }) => {
 	return (
-		<div hidden={filters.length === 0} className="p-3 mt-[-70px] bg-[#ffff] rounded-md shadow-xl">
-			<div className="flex items-center justify-between">
-				<h1> Filters : </h1>
-				<button onClick={() => clearFilters()}>Clear </button>
-			</div>
-			<div className="flex gap-4">
+		<div hidden={filters.length === 0} className="items-center justify-between space-y-2  p-3 mt-[-70px] bg-[#ffff] rounded-md shadow-xl">
+			<div className="flex overflow-hidden whitespace-normal gap-4">
 					{
-						filters.map((filter) => {
-							return (
-								<section key={uuid()} className="p-1 font-bold text-Light-Grayish-Cyan bg-Dark-Grayish-Cyan rounded">
-									<button>{filter}</button>
-									<i src={removeIcon}/>
-								</section>
-							)
-						})
+						filters.map((filter) => <button key={uuid()} className="p-1 font-bold text-Light-Grayish-Cyan bg-Dark-Grayish-Cyan rounded">{filter}</button>
+						)
 					}
 			</div>
+			<button onClick={() => clearFilters()}>Clear </button>
 	</div>
 	)
 }
